@@ -2,12 +2,15 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import { cn } from "@/lib/utils";
-import { BackgroundGradientAnimation } from "./GradientBg";
+import dynamic from "next/dynamic";
+// import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import Lottie from "react-lottie";
-
+const BackgroundGradientAnimation: any = dynamic(() => import("./GradientBg"), {
+  ssr: false,
+});
 export const BentoGrid = ({
   className,
   children,
