@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "./provider";
+import { ThemeProvider } from "../components/Providers/provider";
 
 export const metadata: Metadata = {
   title: "Irfanul Madar's Portfolio",
