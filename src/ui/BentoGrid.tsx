@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
@@ -62,9 +62,9 @@ export const BentoGridItem = ({
     },
   };
 
-  const handleCopy = () => {
+  const handleCopy = async () => {
     const text = "bbinmask@gmail.com";
-    navigator.clipboard.writeText(text);
+    await navigator.clipboard.writeText(text);
     setCopied(true);
   };
 
@@ -180,8 +180,8 @@ export const BentoGridItem = ({
                   copied ? "block" : "block"
                 }`}
               >
-                {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                {/* <img src="/confetti.gif" alt="confetti" />
+                <Lottie options={defaultOptions} height={200} width={400} /> */}
               </div>
 
               <MagicButton
